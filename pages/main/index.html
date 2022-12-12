@@ -6,6 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Shelter</title>
 	<link href="./style.css" rel="stylesheet">
+	<link href="./../../assets/css/base.css" rel="stylesheet">
 	<link href="./../../assets/normalize.css" rel="stylesheet">
 	<script src="./script.js" defer async></script>
 </head>
@@ -22,7 +23,7 @@
 				<nav class="nav">
 					<ul class="menu">
 						<li class="menu__item"><a href="#about-the-shelter">About the shelter</a></li>
-						<li class="menu__item"><a href="#">Our pets</a></li>
+						<li class="menu__item"><a href="./../pets/index.html">Our pets</a></li>
 						<li class="menu__item"><a href="#help-the-shelter">Help the shelter</a></li>
 						<li class="menu__item"><a href="#contacts">Contacts</a></li>
 					</ul>
@@ -62,60 +63,323 @@
 			<div class="container">
 				<div class="pets__column">
 					<h3 class="pets__heading">Our friends who<br>are looking for a&nbsp;house</h3>
-					<div class="pets__slider">
-						<div class="slider__box">
-							<div class="slider__items" data-loop="true">
-								<div class="pet__card">
-									<img src="./../../assets/images/pets-katrine.png" alt="pets-katrine">
-									<h4 class="pet__name">Katrine</h4>
-									<button class="button_secondary">Learn more</button>
-								</div>
-								<div class="pet__card">
-									<img src="./../../assets/images/pets-jennifer.png" alt="pets-jennifer">
-									<h4 class="pet__name">Jennifer</h4>
-									<button class="button_secondary">Learn more</button>
-								</div>
-								<div class="pet__card">
-									<img src="./../../assets/images/pets-woody.png" alt="pets-woody">
-									<h4 class="pet__name">Woody</h4>
-									<button class="button_secondary">Learn more</button>
-								</div>
-								<div class="pet__card">
-									<img src="./../../assets/images/pets-sophia.png" alt="pets-sophia">
-									<h4 class="pet__name">Sophia</h4>
-									<button class="button_secondary">Learn more</button>
-								</div>
-								<div class="pet__card">
-									<img src="./../../assets/images/pets-timmy.png" alt="pets-timmy">
-									<h4 class="pet__name">Timmy</h4>
-									<button class="button_secondary">Learn more</button>
-								</div>
-								<div class="pet__card">
-									<img src="./../../assets/images/pets-charly.png" alt="pets-charly">
-									<h4 class="pet__name">Charly</h4>
-									<button class="button_secondary">Learn more</button>
-								</div>
-								<div class="pet__card">
-									<img src="./../../assets/images/pets-scarlet.png" alt="pets-charly">
-									<h4 class="pet__name">Scarlet</h4>
-									<button class="button_secondary">Learn more</button>
-								</div>
-								<div class="pet__card">
-									<img src="./../../assets/images/pets-freddy.png" alt="pets-charly">
-									<h4 class="pet__name">Freddy</h4>
-									<button class="button_secondary">Learn more</button>
-								</div>
-							</div>
-						</div>
-						
-						<button class="slider__button_next button_round">
-							<img src="./../../assets/icons/arrow-right.svg" alt="arrow-right">
-						</button>
+					<div class="slider__wrapper">
 						<button class="slider__button_prev button_round">
 							<img src="./../../assets/icons/arrow-left.svg" alt="arrow-left">
 						</button>
+						<div class="slider__container">
+								<div class="slider__track">
+									<div class="slider__item">
+										<div class="pet__card">
+											<img src="./../../assets/images/pets-katrine.png" alt="pets-katrine">
+											<h4 class="pet__name">Katrine</h4>
+											<button class="pet__button button_secondary" data-path="pets-katrine">Learn more</button>
+										</div>
+									</div>
+									<div class="slider__item">
+										<div class="pet__card">
+											<img src="./../../assets/images/pets-jennifer.png" alt="pets-jennifer">
+											<h4 class="pet__name">Jennifer</h4>
+											<button class="pet__button button_secondary" data-path="pets-jennifer">Learn more</button>
+										</div>
+									</div>
+									<div class="slider__item">
+										<div class="pet__card">
+											<div class="pet__image">
+												<img src="./../../assets/images/pets-woody.png" alt="pets-woody">
+											</div>
+											<h4 class="pet__name">Woody</h4>
+											<button class="pet__button button_secondary" data-path="pets-woody">Learn more</button>
+										</div>
+									</div>
+									<div class="slider__item">
+										<div class="pet__card">
+											<div class="pet__image">
+												<img src="./../../assets/images/pets-sophia.png" alt="pets-sophia">
+											</div>
+											<h4 class="pet__name">Sophia</h4>
+											<button class="pet__button button_secondary" data-path="pets-sophia">Learn more</button>
+										</div>
+									</div>
+									<div class="slider__item">
+										<div class="pet__card">
+											<div class="pet__image">
+												<img src="./../../assets/images/pets-timmy.png" alt="pets-timmy">
+											</div>
+											<h4 class="pet__name">Timmy</h4>
+											<button class="pet__button button_secondary" data-path="pets-timmy">Learn more</button>
+										</div>
+									</div>
+									<div class="slider__item">
+										<div class="pet__card">
+											<div class="pet__image">
+												<img src="./../../assets/images/pets-charly.png" alt="pets-charly">
+											</div>
+											<h4 class="pet__name">Charly</h4>
+											<button class="pet__button button_secondary" data-path="pets-charly">Learn more</button>
+										</div>
+									</div>
+									<div class="slider__item">
+										<div class="pet__card">
+											<div class="pet__image">
+												<img src="./../../assets/images/pets-scarlet.png" alt="pets-charly">
+											</div>
+											<h4 class="pet__name">Scarlet</h4>
+											<button class="pet__button button_secondary" data-path="pets-scarlet">Learn more</button>
+										</div>
+									</div>
+									<div class="slider__item">
+										<div class="pet__card">
+											<div class="pet__image">
+												<img src="./../../assets/images/pets-freddy.png" alt="pets-charly">
+											</div>
+											<h4 class="pet__name">Freddy</h4>
+											<button class="pet__button button_secondary" data-path="pets-freddy">Learn more</button>
+										</div>
+									</div>
+								</div>
+						</div>
+						<button class="slider__button_next button_round">
+							<img src="./../../assets/icons/arrow-right.svg" alt="arrow-right">
+						</button>
 					</div>
-					<button class="button_primary">Get to know the rest</button>
+					<div class="pets__modals">
+						<div class="modal__overlay">
+							<div class="modal" data-target="pets-katrine">
+								<button class="modal__button_close button_round">
+									<img src="./../../assets/icons/close.svg" alt="close">
+								</button>
+								<div class="modal__container">
+									<div class="modal__image">
+										<img src="./../../assets/images/pets-katrine.png" alt="pets-jennifer">
+										</div>
+										<div class="modal__content">
+										<h3 class="model__title">Katrine</h3>
+										<h4 class="modal__subtitle">Cat - British Shorthair</h4>
+										<h5 class="modal__about">Katrine is a beautiful girl. She is as soft as the finest velvet with a thick lush fur. Will love you until the last breath she takes as long as you are the one. She is picky about her affection. She loves cuddles and to stretch into your hands for a deeper relaxations.</h5>
+										<ul class="modal-list">
+											<li class="modal-list__item">
+												<h5><strong>Age:</strong> 1 year</h5>
+											</li>
+											<li class="modal-list__item">
+												<h5><strong>Inoculations:</strong> none</h5>
+											</li>
+											<li class="modal-list__item">
+												<h5><strong>Diseases:</strong> none</h5>
+											</li>
+											<li class="modal-list__item">
+												<h5><strong>Parasites:</strong> none</h5>
+											</li>
+										</ul>
+										</div>
+								</div>
+							</div>
+							<div class="modal" data-target="pets-jennifer">
+								<button class="modal__button_close button_round">
+									<img src="./../../assets/icons/close.svg" alt="close">
+								</button>
+								<div class="modal__container">
+									<div class="modal__image">
+										<img src="./../../assets/images/pets-jennifer.png" alt="pets-jennifer">
+										</div>
+										<div class="modal__content">
+										<h3 class="model__title">Jennifer</h3>
+										<h4 class="modal__subtitle">Dog - Labrador</h4>
+										<h5 class="modal__about">Jennifer is a sweet 2 months old Labrador that is patiently waiting to find a new forever home. This girl really enjoys being able to go outside to run and play, but won't hesitate to play up a storm in the house if she has all of her favorite toys.</h5>
+										<ul class="modal-list">
+											<li class="modal-list__item">
+												<h5><strong>Age:</strong> 2 months</h5>
+											</li>
+											<li class="modal-list__item">
+												<h5><strong>Inoculations:</strong> none</h5>
+											</li>
+											<li class="modal-list__item">
+												<h5><strong>Diseases:</strong> none</h5>
+											</li>
+											<li class="modal-list__item">
+												<h5><strong>Parasites:</strong> none</h5>
+											</li>
+										</ul>
+										</div>
+								</div>
+							</div>
+							<div class="modal" data-target="pets-woody">
+								<button class="modal__button_close button_round">
+									<img src="./../../assets/icons/close.svg" alt="close">
+								</button>
+								<div class="modal__container">
+									<div class="modal__image">
+										<img src="./../../assets/images/pets-woody.png" alt="pets-jennifer">
+										</div>
+										<div class="modal__content">
+										<h3 class="model__title">Woody</h3>
+										<h4 class="modal__subtitle">Dog - Golden Retriever</h4>
+										<h5 class="modal__about">Woody is a handsome 3 1/2 year old boy. Woody does know basic commands and is a smart pup. Since he is on the stronger side, he will learn a lot from your training. Woody will be happier when he finds a new family that can spend a lot of time with him.</h5>
+										<ul class="modal-list">
+											<li class="modal-list__item">
+												<h5><strong>Age:</strong> 3 years</h5>
+											</li>
+											<li class="modal-list__item">
+												<h5><strong>Inoculations:</strong> none</h5>
+											</li>
+											<li class="modal-list__item">
+												<h5><strong>Diseases:</strong> none</h5>
+											</li>
+											<li class="modal-list__item">
+												<h5><strong>Parasites:</strong> none</h5>
+											</li>
+										</ul>
+										</div>
+								</div>
+							</div>
+							<div class="modal" data-target="pets-sophia">
+								<button class="modal__button_close button_round">
+									<img src="./../../assets/icons/close.svg" alt="close">
+								</button>
+								<div class="modal__container">
+									<div class="modal__image">
+										<img src="./../../assets/images/pets-sophia.png" alt="pets-jennifer">
+										</div>
+										<div class="modal__content">
+										<h3 class="model__title">Sophia</h3>
+										<h4 class="modal__subtitle">Dog - Shih tzu</h4>
+										<h5 class="modal__about">Sophia here and I'm looking for my forever home to live out the best years of my life. I am full of energy. Everyday I'm learning new things, like how to walk on a leash, go potty outside, bark and play with toys and I still need some practice.</h5>
+										<ul class="modal-list">
+											<li class="modal-list__item">
+												<h5><strong>Age:</strong> 1 month</h5>
+											</li>
+											<li class="modal-list__item">
+												<h5><strong>Inoculations:</strong> none</h5>
+											</li>
+											<li class="modal-list__item">
+												<h5><strong>Diseases:</strong> none</h5>
+											</li>
+											<li class="modal-list__item">
+												<h5><strong>Parasites:</strong> none</h5>
+											</li>
+										</ul>
+										</div>
+								</div>
+							</div>
+							<div class="modal" data-target="pets-timmy">
+								<button class="modal__button_close button_round">
+									<img src="./../../assets/icons/close.svg" alt="close">
+								</button>
+								<div class="modal__container">
+									<div class="modal__image">
+										<img src="./../../assets/images/pets-timmy.png" alt="pets-jennifer">
+										</div>
+										<div class="modal__content">
+										<h3 class="model__title">Timmy</h3>
+										<h4 class="modal__subtitle">Cat - British Shorthair</h4>
+										<h5 class="modal__about">Timmy is an adorable grey british shorthair male. He loves to play and snuggle. He is neutered and up to date on age appropriate vaccinations. He can be chatty and enjoys being held. Timmy has a lot to say and wants a person to share his thoughts with.</h5>
+										<ul class="modal-list">
+											<li class="modal-list__item">
+												<h5><strong>Age:</strong> 9 month</h5>
+											</li>
+											<li class="modal-list__item">
+												<h5><strong>Inoculations:</strong> none</h5>
+											</li>
+											<li class="modal-list__item">
+												<h5><strong>Diseases:</strong> none</h5>
+											</li>
+											<li class="modal-list__item">
+												<h5><strong>Parasites:</strong> none</h5>
+											</li>
+										</ul>
+										</div>
+								</div>
+							</div>
+							<div class="modal" data-target="pets-charly">
+								<button class="modal__button_close button_round">
+									<img src="./../../assets/icons/close.svg" alt="close">
+								</button>
+								<div class="modal__container">
+									<div class="modal__image">
+										<img src="./../../assets/images/pets-charly.png" alt="pets-jennifer">
+										</div>
+										<div class="modal__content">
+										<h3 class="model__title">Charly</h3>
+										<h4 class="modal__subtitle">Dog - Jack Russell Terrier </h4>
+										<h5 class="modal__about">This cute boy, Charly, is three years old and he likes adults and kids. He isn’t fond of many other dogs, so he might do best in a single dog home. Charly has lots of energy, and loves to run and play. We think a fenced yard would make him very happy.</h5>
+										<ul class="modal-list">
+											<li class="modal-list__item">
+												<h5><strong>Age:</strong> 3 years</h5>
+											</li>
+											<li class="modal-list__item">
+												<h5><strong>Inoculations:</strong> none</h5>
+											</li>
+											<li class="modal-list__item">
+												<h5><strong>Diseases:</strong> none</h5>
+											</li>
+											<li class="modal-list__item">
+												<h5><strong>Parasites:</strong> none</h5>
+											</li>
+										</ul>
+										</div>
+								</div>
+							</div>
+							<div class="modal" data-target="pets-scarlet">
+								<button class="modal__button_close button_round">
+									<img src="./../../assets/icons/close.svg" alt="close">
+								</button>
+								<div class="modal__container">
+									<div class="modal__image">
+										<img src="./../../assets/images/pets-scarlet.png" alt="pets-jennifer">
+										</div>
+										<div class="modal__content">
+										<h3 class="model__title">Scarlet</h3>
+										<h4 class="modal__subtitle">Dog - Jack Russell Terrier</h4>
+										<h5 class="modal__about">Scarlett is a happy, playful girl who will make you laugh and smile. She forms a bond quickly and will make a loyal companion and a wonderful family dog or a good companion for a single individual too since she likes to hang out and be with her human.</h5>
+										<ul class="modal-list">
+											<li class="modal-list__item">
+												<h5><strong>Age:</strong> 2 month</h5>
+											</li>
+											<li class="modal-list__item">
+												<h5><strong>Inoculations:</strong> none</h5>
+											</li>
+											<li class="modal-list__item">
+												<h5><strong>Diseases:</strong> none</h5>
+											</li>
+											<li class="modal-list__item">
+												<h5><strong>Parasites:</strong> none</h5>
+											</li>
+										</ul>
+										</div>
+								</div>
+							</div>
+							<div class="modal" data-target="pets-freddy">
+								<button class="modal__button_close button_round">
+									<img src="./../../assets/icons/close.svg" alt="close">
+								</button>
+								<div class="modal__container">
+									<div class="modal__image">
+										<img src="./../../assets/images/pets-freddy.png" alt="pets-jennifer">
+										</div>
+										<div class="modal__content">
+										<h3 class="model__title">Freddy</h3>
+										<h4 class="modal__subtitle">Cat - British Shorthair</h4>
+										<h5 class="modal__about">Freddie is a little shy at first, but very sweet when he warms up. He likes playing with shoe strings and bottle caps. He is quick to learn the rhythms of his human’s daily life. Freddie has bounced around a lot in his life, and is looking to find his forever home.</h5>
+										<ul class="modal-list">
+											<li class="modal-list__item">
+												<h5><strong>Age:</strong> 2 month</h5>
+											</li>
+											<li class="modal-list__item">
+												<h5><strong>Inoculations:</strong> none</h5>
+											</li>
+											<li class="modal-list__item">
+												<h5><strong>Diseases:</strong> none</h5>
+											</li>
+											<li class="modal-list__item">
+												<h5><strong>Parasites:</strong> none</h5>
+											</li>
+										</ul>
+										</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<button class="pets__button button_primary">Get to know the rest</button>
 				</div>
 			</div>
 		</section>
@@ -174,7 +438,7 @@
 						<h3 class="donation__heading">You can also<br>make a donation</h3>
 						<h5 class="donation__subheading">Name of the bank / Type of bank account</h5>
 						<a href="##">
-							<button class="donation__button button_primary">
+							<button class="donation__button">
 								<img src="./../../assets/icons/credit-card.svg" alt="credit-card">
 								<h4>8380 2880 8028 8791 7435</h4>
 							</button>
