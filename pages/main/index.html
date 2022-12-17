@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,16 +9,21 @@
 	<link href="./style.css" rel="stylesheet">
 	<link href="./../../assets/css/base.css" rel="stylesheet">
 	<link href="./../../assets/normalize.css" rel="stylesheet">
-	<script src="./script.js" defer async></script>
+	<link rel="stylesheet" href="./../../assets/css/swiper-bundle.min.css">
+	<script src="./../../assets/js/swiper-bundle.min.js" defer></script>
+	<script src="./script.js" defer></script>
+	
+	
 </head>
 
 <body>
-
 	<header class="header">
 		<div class="container">
 			<div class="header__row">
 				<div class="logo">
-					<a class="logo__name" href="#"><h1>Cozy House</h1></a>
+					<a class="logo__name" href="#">
+						<h1>Cozy House</h1>
+					</a>
 					<span class="logo__subtitle">Shelter for pets in Boston</span>
 				</div>
 				<nav class="nav">
@@ -38,7 +44,8 @@
 				<div class="start-screen__row">
 					<div class="start-screen__content">
 						<h2 class="start-screen__heading">Not only people<br>need a&nbsp;house</h2>
-						<p class="start-screen__subheading">We offer to give a chance to a little and nice puppy with an extremely wide and open heart. He or she will love you more than anybody else in the world, you will see!</p>
+						<p class="start-screen__subheading">We offer to give a chance to a little and nice puppy with an extremely
+							wide and open heart. He or she will love you more than anybody else in the world, you will see!</p>
 						<a href="#make-a-friend"><button class="button_primary">Make a friend</button></a>
 					</div>
 					<div class="start-screen__photo"></div>
@@ -52,8 +59,13 @@
 					<div class="about__pets"></div>
 					<div class="about__content">
 						<h3 class="about__heading">About the shelter<br>“Cozy House”</h3>
-						<p class="about__subheading">Currently we have 121 dogs and 342 cats on our hands and statistics show that only 20% of them will find a family. The others will continue to live with us and will be waiting for a lucky chance to become dearly loved.</p>
-						<p class="about__subheading">We feed our wards with the best food and make sure that they do not get sick, feel comfortable (including psychologically) and well. We are supported by 87 volunteers and 28 employees of various skill levels. About 12% of the animals are taken by the shelter staff. Taking care of the animals, they become attached to the pets and would hardly ever leave them alone.</p>
+						<p class="about__subheading">Currently we have 121 dogs and 342 cats on our hands and statistics show that
+							only 20% of them will find a family. The others will continue to live with us and will be waiting for a
+							lucky chance to become dearly loved.</p>
+						<p class="about__subheading">We feed our wards with the best food and make sure that they do not get sick,
+							feel comfortable (including psychologically) and well. We are supported by 87 volunteers and 28 employees
+							of various skill levels. About 12% of the animals are taken by the shelter staff. Taking care of the
+							animals, they become attached to the pets and would hardly ever leave them alone.</p>
 					</div>
 				</div>
 			</div>
@@ -63,85 +75,91 @@
 			<div class="container">
 				<div class="pets__column">
 					<h3 class="pets__heading">Our friends who<br>are looking for a&nbsp;house</h3>
-					<div class="slider__wrapper">
-						<button class="slider__button_prev button_round">
-							<img src="./../../assets/icons/arrow-left.svg" alt="arrow-left">
-						</button>
-						<div class="slider__container">
-								<div class="slider__track">
-									<div class="slider__item">
-										<div class="pet__card">
+					<div class="slider">
+						<div class="swiper">
+							<div class="swiper-wrapper">
+								<div class="swiper-slide">
+									<div class="pet__card">
+										<div class="pet__image">
 											<img src="./../../assets/images/pets-katrine.png" alt="pets-katrine">
-											<h4 class="pet__name">Katrine</h4>
-											<button class="pet__button button_secondary" data-path="pets-katrine">Learn more</button>
 										</div>
-									</div>
-									<div class="slider__item">
-										<div class="pet__card">
-											<img src="./../../assets/images/pets-jennifer.png" alt="pets-jennifer">
-											<h4 class="pet__name">Jennifer</h4>
-											<button class="pet__button button_secondary" data-path="pets-jennifer">Learn more</button>
-										</div>
-									</div>
-									<div class="slider__item">
-										<div class="pet__card">
-											<div class="pet__image">
-												<img src="./../../assets/images/pets-woody.png" alt="pets-woody">
-											</div>
-											<h4 class="pet__name">Woody</h4>
-											<button class="pet__button button_secondary" data-path="pets-woody">Learn more</button>
-										</div>
-									</div>
-									<div class="slider__item">
-										<div class="pet__card">
-											<div class="pet__image">
-												<img src="./../../assets/images/pets-sophia.png" alt="pets-sophia">
-											</div>
-											<h4 class="pet__name">Sophia</h4>
-											<button class="pet__button button_secondary" data-path="pets-sophia">Learn more</button>
-										</div>
-									</div>
-									<div class="slider__item">
-										<div class="pet__card">
-											<div class="pet__image">
-												<img src="./../../assets/images/pets-timmy.png" alt="pets-timmy">
-											</div>
-											<h4 class="pet__name">Timmy</h4>
-											<button class="pet__button button_secondary" data-path="pets-timmy">Learn more</button>
-										</div>
-									</div>
-									<div class="slider__item">
-										<div class="pet__card">
-											<div class="pet__image">
-												<img src="./../../assets/images/pets-charly.png" alt="pets-charly">
-											</div>
-											<h4 class="pet__name">Charly</h4>
-											<button class="pet__button button_secondary" data-path="pets-charly">Learn more</button>
-										</div>
-									</div>
-									<div class="slider__item">
-										<div class="pet__card">
-											<div class="pet__image">
-												<img src="./../../assets/images/pets-scarlet.png" alt="pets-charly">
-											</div>
-											<h4 class="pet__name">Scarlet</h4>
-											<button class="pet__button button_secondary" data-path="pets-scarlet">Learn more</button>
-										</div>
-									</div>
-									<div class="slider__item">
-										<div class="pet__card">
-											<div class="pet__image">
-												<img src="./../../assets/images/pets-freddy.png" alt="pets-charly">
-											</div>
-											<h4 class="pet__name">Freddy</h4>
-											<button class="pet__button button_secondary" data-path="pets-freddy">Learn more</button>
-										</div>
+										<h4 class="pet__name">Katrine</h4>
+										<button class="pet__button button_secondary" data-path="pets-katrine">Learn more</button>
 									</div>
 								</div>
+								<div class="swiper-slide">
+									<div class="pet__card">
+										<div class="pet__image">
+											<img src="./../../assets/images/pets-jennifer.png" alt="pets-jennifer">
+										</div>
+										<h4 class="pet__name">Jennifer</h4>
+										<button class="pet__button button_secondary" data-path="pets-jennifer">Learn more</button>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="pet__card">
+										<div class="pet__image">
+											<img src="./../../assets/images/pets-woody.png" alt="pets-woody">
+										</div>
+										<h4 class="pet__name">Woody</h4>
+										<button class="pet__button button_secondary" data-path="pets-woody">Learn more</button>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="pet__card">
+										<div class="pet__image">
+											<img src="./../../assets/images/pets-sophia.png" alt="pets-sophia">
+										</div>
+										<h4 class="pet__name">Sophia</h4>
+										<button class="pet__button button_secondary" data-path="pets-sophia">Learn more</button>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="pet__card">
+										<div class="pet__image">
+											<img src="./../../assets/images/pets-timmy.png" alt="pets-timmy">
+										</div>
+										<h4 class="pet__name">Timmy</h4>
+										<button class="pet__button button_secondary" data-path="pets-timmy">Learn more</button>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="pet__card">
+										<div class="pet__image">
+											<img src="./../../assets/images/pets-charly.png" alt="pets-charly">
+										</div>
+										<h4 class="pet__name">Charly</h4>
+										<button class="pet__button button_secondary" data-path="pets-charly">Learn more</button>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="pet__card">
+										<div class="pet__image">
+											<img src="./../../assets/images/pets-scarlet.png" alt="pets-charly">
+										</div>
+										<h4 class="pet__name">Scarlet</h4>
+										<button class="pet__button button_secondary" data-path="pets-scarlet">Learn more</button>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="pet__card">
+										<div class="pet__image">
+											<img src="./../../assets/images/pets-freddy.png" alt="pets-charly">
+										</div>
+										<h4 class="pet__name">Freddy</h4>
+										<button class="pet__button button_secondary" data-path="pets-freddy">Learn more</button>
+									</div>
+								</div>
+							</div>
 						</div>
-						<button class="slider__button_next button_round">
-							<img src="./../../assets/icons/arrow-right.svg" alt="arrow-right">
-						</button>
+						<div class="slider__navigation">
+							<button class="swiper__button_prev button button_round">
+								<img src="./../../assets/icons/arrow-left.svg" alt="arrow-left">
+							</button>
+							<button class="swiper__button_next button button_round">
+								<img src="./../../assets/icons/arrow-right.svg" alt="arrow-right">
+							</button>
+						</div>
 					</div>
 					<div class="pets__modals">
 						<div class="modal__overlay">
@@ -152,11 +170,14 @@
 								<div class="modal__container">
 									<div class="modal__image">
 										<img src="./../../assets/images/pets-katrine.png" alt="pets-jennifer">
-										</div>
-										<div class="modal__content">
+									</div>
+									<div class="modal__content">
 										<h3 class="model__title">Katrine</h3>
 										<h4 class="modal__subtitle">Cat - British Shorthair</h4>
-										<h5 class="modal__about">Katrine is a beautiful girl. She is as soft as the finest velvet with a thick lush fur. Will love you until the last breath she takes as long as you are the one. She is picky about her affection. She loves cuddles and to stretch into your hands for a deeper relaxations.</h5>
+										<h5 class="modal__about">Katrine is a beautiful girl. She is as soft as the finest velvet with a
+											thick lush fur. Will love you until the last breath she takes as long as you are the one. She is
+											picky about her affection. She loves cuddles and to stretch into your hands for a deeper
+											relaxations.</h5>
 										<ul class="modal-list">
 											<li class="modal-list__item">
 												<h5><strong>Age:</strong> 1 year</h5>
@@ -171,7 +192,7 @@
 												<h5><strong>Parasites:</strong> none</h5>
 											</li>
 										</ul>
-										</div>
+									</div>
 								</div>
 							</div>
 							<div class="modal" data-target="pets-jennifer">
@@ -181,11 +202,13 @@
 								<div class="modal__container">
 									<div class="modal__image">
 										<img src="./../../assets/images/pets-jennifer.png" alt="pets-jennifer">
-										</div>
-										<div class="modal__content">
+									</div>
+									<div class="modal__content">
 										<h3 class="model__title">Jennifer</h3>
 										<h4 class="modal__subtitle">Dog - Labrador</h4>
-										<h5 class="modal__about">Jennifer is a sweet 2 months old Labrador that is patiently waiting to find a new forever home. This girl really enjoys being able to go outside to run and play, but won't hesitate to play up a storm in the house if she has all of her favorite toys.</h5>
+										<h5 class="modal__about">Jennifer is a sweet 2 months old Labrador that is patiently waiting to find
+											a new forever home. This girl really enjoys being able to go outside to run and play, but won't
+											hesitate to play up a storm in the house if she has all of her favorite toys.</h5>
 										<ul class="modal-list">
 											<li class="modal-list__item">
 												<h5><strong>Age:</strong> 2 months</h5>
@@ -200,7 +223,7 @@
 												<h5><strong>Parasites:</strong> none</h5>
 											</li>
 										</ul>
-										</div>
+									</div>
 								</div>
 							</div>
 							<div class="modal" data-target="pets-woody">
@@ -210,11 +233,13 @@
 								<div class="modal__container">
 									<div class="modal__image">
 										<img src="./../../assets/images/pets-woody.png" alt="pets-jennifer">
-										</div>
-										<div class="modal__content">
+									</div>
+									<div class="modal__content">
 										<h3 class="model__title">Woody</h3>
 										<h4 class="modal__subtitle">Dog - Golden Retriever</h4>
-										<h5 class="modal__about">Woody is a handsome 3 1/2 year old boy. Woody does know basic commands and is a smart pup. Since he is on the stronger side, he will learn a lot from your training. Woody will be happier when he finds a new family that can spend a lot of time with him.</h5>
+										<h5 class="modal__about">Woody is a handsome 3 1/2 year old boy. Woody does know basic commands and
+											is a smart pup. Since he is on the stronger side, he will learn a lot from your training. Woody
+											will be happier when he finds a new family that can spend a lot of time with him.</h5>
 										<ul class="modal-list">
 											<li class="modal-list__item">
 												<h5><strong>Age:</strong> 3 years</h5>
@@ -229,7 +254,7 @@
 												<h5><strong>Parasites:</strong> none</h5>
 											</li>
 										</ul>
-										</div>
+									</div>
 								</div>
 							</div>
 							<div class="modal" data-target="pets-sophia">
@@ -239,11 +264,13 @@
 								<div class="modal__container">
 									<div class="modal__image">
 										<img src="./../../assets/images/pets-sophia.png" alt="pets-jennifer">
-										</div>
-										<div class="modal__content">
+									</div>
+									<div class="modal__content">
 										<h3 class="model__title">Sophia</h3>
 										<h4 class="modal__subtitle">Dog - Shih tzu</h4>
-										<h5 class="modal__about">Sophia here and I'm looking for my forever home to live out the best years of my life. I am full of energy. Everyday I'm learning new things, like how to walk on a leash, go potty outside, bark and play with toys and I still need some practice.</h5>
+										<h5 class="modal__about">Sophia here and I'm looking for my forever home to live out the best years
+											of my life. I am full of energy. Everyday I'm learning new things, like how to walk on a leash, go
+											potty outside, bark and play with toys and I still need some practice.</h5>
 										<ul class="modal-list">
 											<li class="modal-list__item">
 												<h5><strong>Age:</strong> 1 month</h5>
@@ -258,7 +285,7 @@
 												<h5><strong>Parasites:</strong> none</h5>
 											</li>
 										</ul>
-										</div>
+									</div>
 								</div>
 							</div>
 							<div class="modal" data-target="pets-timmy">
@@ -268,11 +295,13 @@
 								<div class="modal__container">
 									<div class="modal__image">
 										<img src="./../../assets/images/pets-timmy.png" alt="pets-jennifer">
-										</div>
-										<div class="modal__content">
+									</div>
+									<div class="modal__content">
 										<h3 class="model__title">Timmy</h3>
 										<h4 class="modal__subtitle">Cat - British Shorthair</h4>
-										<h5 class="modal__about">Timmy is an adorable grey british shorthair male. He loves to play and snuggle. He is neutered and up to date on age appropriate vaccinations. He can be chatty and enjoys being held. Timmy has a lot to say and wants a person to share his thoughts with.</h5>
+										<h5 class="modal__about">Timmy is an adorable grey british shorthair male. He loves to play and
+											snuggle. He is neutered and up to date on age appropriate vaccinations. He can be chatty and
+											enjoys being held. Timmy has a lot to say and wants a person to share his thoughts with.</h5>
 										<ul class="modal-list">
 											<li class="modal-list__item">
 												<h5><strong>Age:</strong> 9 month</h5>
@@ -287,7 +316,7 @@
 												<h5><strong>Parasites:</strong> none</h5>
 											</li>
 										</ul>
-										</div>
+									</div>
 								</div>
 							</div>
 							<div class="modal" data-target="pets-charly">
@@ -297,11 +326,13 @@
 								<div class="modal__container">
 									<div class="modal__image">
 										<img src="./../../assets/images/pets-charly.png" alt="pets-jennifer">
-										</div>
-										<div class="modal__content">
+									</div>
+									<div class="modal__content">
 										<h3 class="model__title">Charly</h3>
 										<h4 class="modal__subtitle">Dog - Jack Russell Terrier </h4>
-										<h5 class="modal__about">This cute boy, Charly, is three years old and he likes adults and kids. He isn’t fond of many other dogs, so he might do best in a single dog home. Charly has lots of energy, and loves to run and play. We think a fenced yard would make him very happy.</h5>
+										<h5 class="modal__about">This cute boy, Charly, is three years old and he likes adults and kids. He
+											isn’t fond of many other dogs, so he might do best in a single dog home. Charly has lots of
+											energy, and loves to run and play. We think a fenced yard would make him very happy.</h5>
 										<ul class="modal-list">
 											<li class="modal-list__item">
 												<h5><strong>Age:</strong> 3 years</h5>
@@ -316,7 +347,7 @@
 												<h5><strong>Parasites:</strong> none</h5>
 											</li>
 										</ul>
-										</div>
+									</div>
 								</div>
 							</div>
 							<div class="modal" data-target="pets-scarlet">
@@ -326,11 +357,13 @@
 								<div class="modal__container">
 									<div class="modal__image">
 										<img src="./../../assets/images/pets-scarlet.png" alt="pets-jennifer">
-										</div>
-										<div class="modal__content">
+									</div>
+									<div class="modal__content">
 										<h3 class="model__title">Scarlet</h3>
 										<h4 class="modal__subtitle">Dog - Jack Russell Terrier</h4>
-										<h5 class="modal__about">Scarlett is a happy, playful girl who will make you laugh and smile. She forms a bond quickly and will make a loyal companion and a wonderful family dog or a good companion for a single individual too since she likes to hang out and be with her human.</h5>
+										<h5 class="modal__about">Scarlett is a happy, playful girl who will make you laugh and smile. She
+											forms a bond quickly and will make a loyal companion and a wonderful family dog or a good
+											companion for a single individual too since she likes to hang out and be with her human.</h5>
 										<ul class="modal-list">
 											<li class="modal-list__item">
 												<h5><strong>Age:</strong> 2 month</h5>
@@ -345,7 +378,7 @@
 												<h5><strong>Parasites:</strong> none</h5>
 											</li>
 										</ul>
-										</div>
+									</div>
 								</div>
 							</div>
 							<div class="modal" data-target="pets-freddy">
@@ -355,11 +388,13 @@
 								<div class="modal__container">
 									<div class="modal__image">
 										<img src="./../../assets/images/pets-freddy.png" alt="pets-jennifer">
-										</div>
-										<div class="modal__content">
+									</div>
+									<div class="modal__content">
 										<h3 class="model__title">Freddy</h3>
 										<h4 class="modal__subtitle">Cat - British Shorthair</h4>
-										<h5 class="modal__about">Freddie is a little shy at first, but very sweet when he warms up. He likes playing with shoe strings and bottle caps. He is quick to learn the rhythms of his human’s daily life. Freddie has bounced around a lot in his life, and is looking to find his forever home.</h5>
+										<h5 class="modal__about">Freddie is a little shy at first, but very sweet when he warms up. He likes
+											playing with shoe strings and bottle caps. He is quick to learn the rhythms of his human’s daily
+											life. Freddie has bounced around a lot in his life, and is looking to find his forever home.</h5>
 										<ul class="modal-list">
 											<li class="modal-list__item">
 												<h5><strong>Age:</strong> 2 month</h5>
@@ -374,12 +409,14 @@
 												<h5><strong>Parasites:</strong> none</h5>
 											</li>
 										</ul>
-										</div>
+									</div>
 								</div>
 							</div>
 						</div>
 					</div>
-					<button class="pets__button button_primary">Get to know the rest</button>
+					<a href="./../pets/index.html">
+						<button class="pets__button button_primary">Get to know the rest</button>
+					</a>
 				</div>
 			</div>
 		</section>
@@ -443,7 +480,9 @@
 								<h4>8380 2880 8028 8791 7435</h4>
 							</button>
 						</a>
-						<div class="donation__information">Legal information and lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas a ipsum at libero sagittis dignissim sed ac diam. Praesent ultrices maximus tortor et vulputate. Interdum et malesuada fames ac ante ipsum primis in faucibus.</div>
+						<div class="donation__information">Legal information and lorem ipsum dolor sit amet, consectetur adipiscing
+							elit. Maecenas a ipsum at libero sagittis dignissim sed ac diam. Praesent ultrices maximus tortor et
+							vulputate. Interdum et malesuada fames ac ante ipsum primis in faucibus.</div>
 					</div>
 				</div>
 			</div>
@@ -466,11 +505,13 @@
 				</div>
 				<div class="footer__location">
 					<h3 class="footer__title">We are waiting<br>for your visit</h3>
-					<a class="footer__link" target="_blank" href="https://www.google.com/maps/place/1+Central+St,+Boston,+MA+02109,+%D0%A1%D0%A8%D0%90/@42.3585519,-71.056915,17z/data=!3m1!4b1!4m5!3m4!1s0x89e370868bc2ce7b:0x82fa7db94f5fea9e!8m2!3d42.3585519!4d-71.0547263">
+					<a class="footer__link" target="_blank"
+						href="https://www.google.com/maps/place/1+Central+St,+Boston,+MA+02109,+%D0%A1%D0%A8%D0%90/@42.3585519,-71.056915,17z/data=!3m1!4b1!4m5!3m4!1s0x89e370868bc2ce7b:0x82fa7db94f5fea9e!8m2!3d42.3585519!4d-71.0547263">
 						<img src="./../../assets/icons/icon-marker.svg" alt="icon-marker">
 						<h4>1 Central Street, Boston<br>(entrance from the store)</h4>
 					</a>
-					<a class="footer__link" target="_blank" href="https://www.google.com/maps/place/South+Park+Court,+18+S+Park+Rd,+London+SW19+8TD,+%D0%92%D0%B5%D0%BB%D0%B8%D0%BA%D0%BE%D0%B1%D1%80%D0%B8%D1%82%D0%B0%D0%BD%D0%B8%D1%8F/@51.4214127,-0.2116088,15.41z/data=!4m13!1m7!3m6!1s0x487608baa7401b31:0x873a95ca58e122b2!2zU291dGggUGFyayBDb3VydCwgMTggUyBQYXJrIFJkLCBMb25kb24gU1cxOSA4VEQsINCS0LXQu9C40LrQvtCx0YDQuNGC0LDQvdC40Y8!3b1!8m2!3d51.4202192!4d-0.200152!3m4!1s0x487608baa7401b31:0x873a95ca58e122b2!8m2!3d51.4202192!4d-0.200152">
+					<a class="footer__link" target="_blank"
+						href="https://www.google.com/maps/place/South+Park+Court,+18+S+Park+Rd,+London+SW19+8TD,+%D0%92%D0%B5%D0%BB%D0%B8%D0%BA%D0%BE%D0%B1%D1%80%D0%B8%D1%82%D0%B0%D0%BD%D0%B8%D1%8F/@51.4214127,-0.2116088,15.41z/data=!4m13!1m7!3m6!1s0x487608baa7401b31:0x873a95ca58e122b2!2zU291dGggUGFyayBDb3VydCwgMTggUyBQYXJrIFJkLCBMb25kb24gU1cxOSA4VEQsINCS0LXQu9C40LrQvtCx0YDQuNGC0LDQvdC40Y8!3b1!8m2!3d51.4202192!4d-0.200152!3m4!1s0x487608baa7401b31:0x873a95ca58e122b2!8m2!3d51.4202192!4d-0.200152">
 						<img src="./../../assets/icons/icon-marker.svg" alt="icon-marker">
 						<h4>18 South Park, London</h4>
 					</a>
@@ -480,4 +521,5 @@
 		</div>
 	</footer>
 </body>
+
 </html>

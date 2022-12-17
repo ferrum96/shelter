@@ -1,11 +1,10 @@
 // Fixed header
-
 const header = document.querySelector('.header'),
 	headerHeight = header.offsetHeight;
 
 window.addEventListener('scroll', () => {
 	let scrollDistance = window.scrollY;
-	console.log(scrollDistance)
+	// console.log(scrollDistance)
 
 	if (scrollDistance >= headerHeight) {
 		header.classList.add('header_fixed');
@@ -15,51 +14,36 @@ window.addEventListener('scroll', () => {
 });
 
 // Slider
-let position = 0;
-const slidesToShow = 3;
-const slidesToScroll = 1;
-const sliderContainer = document.querySelector('.slider__container');
-const sliderTrack = document.querySelector('.slider__track');
-const sliderItems = document.querySelectorAll('.slider__item');
-const itemsCount = sliderItems.length;
-const buttonPrev = document.querySelector('.slider__button_prev');
-const buttonNext = document.querySelector('.slider__button_next');
-let gap = 90;
-const itemWidth = (sliderContainer.clientWidth + gap) / slidesToShow;
-console.log(sliderContainer.clientWidth)
-const movePosition = slidesToScroll * itemWidth;
+var swiper = new Swiper(".swiper", {
+	spaceBetween: 30,
+	loop: true,
+	onlyExternal: true,
 
-sliderItems.forEach((item) => {
-	item.style.minWidth = `${itemWidth}px`
-})
+	navigation: {
+		nextEl: ".swiper__button_next",
+		prevEl: ".swiper__button_prev",
+	},
 
-buttonNext.addEventListener('click', () =>{
-	const itemsLeft = itemsCount - (Math.abs(position) + slidesToShow * itemWidth) / itemWidth;
-	position -= itemsLeft >= slidesToScroll ? movePosition : itemsLeft * itemWidth;
-
-	setPosition();
-	checkBtns();
+	breakpoints: {
+		// desktop >= 1200
+		1201: {
+			slidesPerView: 3,
+			spaceBetween: 90,
+		},
+		//760-1199
+		760: {
+			slidesPerView: 2,
+			spaceBetween: 40,
+		},
+		// 320-759
+		320: {
+			slidesPerView: 1,
+			spaceBetween: 40,
+		},
+	}
 });
-
-buttonPrev.addEventListener('click', () =>{
-	const itemsLeft = Math.abs(position) / itemWidth;
-	position += itemsLeft >= slidesToScroll ? movePosition : itemsLeft * itemWidth;
-
-	setPosition();
-	checkBtns();
-});
-
-const setPosition = () => {
-	sliderTrack.style.transform = `translateX(${position}px)`;
-};
-
-const checkBtns = () => {
-	buttonPrev.disabled = position === 0;
-	buttonNext.disabled = position <= -(itemsCount - slidesToShow) * itemWidth;
-};
 
 // Modal window
-
 const petButtons = document.querySelectorAll('.pet__button');
 const modalCloseButtons = document.querySelectorAll('.modal__button_close');
 const modalOverlay = document.querySelector('.modal__overlay');
