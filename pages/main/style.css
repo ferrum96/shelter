@@ -20,7 +20,7 @@
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	
+
 }
 
 .logo {
@@ -54,7 +54,7 @@
 	padding-bottom: 5px;
 }
 
-.menu__item a{
+.menu__item a {
 	position: relative;
 	font-size: 15px;
 	line-height: 160%;
@@ -65,22 +65,22 @@
 .menu__item a:after {
 	display: block;
 	position: absolute;
-	left: 0; 
+	left: 0;
 	width: 0;
-	height: 3px; 
-	background-color: var(--color-primary); 
+	height: 3px;
+	background-color: var(--color-primary);
 	content: "";
-	transition: width 0.3s ease-out; 
+	transition: width 0.3s ease-out;
 }
 
 .menu__item a:hover,
-.menu__item a:focus{
+.menu__item a:focus {
 	color: var(--color-light-s);
 }
 
 .menu__item a:hover:after,
 .menu__item a:focus:after {
-	width: 100%; 
+	width: 100%;
 }
 
 .start-screen {
@@ -131,7 +131,7 @@
 
 .about__row {
 	display: flex;
-	justify-content:  center;
+	justify-content: center;
 	column-gap: 120px;
 	align-items: center;
 }
@@ -171,6 +171,7 @@
 .pets__column {
 	display: flex;
 	flex-direction: column;
+	align-items: center;
 }
 
 .pets__heading {
@@ -182,143 +183,24 @@
 	align-self: center;
 }
 
-.slider__wrapper {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-}
-
-.slider__container {
-	display: block;
-	overflow: hidden;
-	max-width: 990px;
-}
-
-.slider__track {
-	display: flex;
-	justify-content: start;
-	transition: all .5s ease;
-}
-
-.slider__button_prev,
-.slider__button_next {
-	transform: translateY(-28px)
-}
-
-.pet__card {
+.slider {
 	display: flex;
 	flex-direction: column;
-	justify-content: space-between;
-	align-items: center;
-	width: 270px;
-	height: 435px;
-	border-radius: 9px;
-	background-color: var(--color-light-s);
-	margin-bottom: 59px;
-	padding-bottom: 30px;
-}
-
-.pet__image img{
-	width: 270px;
-	height: 270px;
-	border-radius: 9px 9px 0 0;
-	background-size: cover;
-}
-
-.pet__name {
-	color: var(--color-dark-l);
-}
-
-.modal {
-	width: 900px;
-	height: 500px;
-	background-color: var(--color-light-s);
-	display: none;
-	position: relative;
-	border-radius: 9px;
-}
-
-.modal__container {
-	display: flex;
-}
-
-.modal__image img{
-	width: 500px;
-	height: 500px;
-	border-radius: 9px 0 0 9px;
-}
-.modal__content {
-	width: 351px;
-	height: 362px;
-	display: flex;
-	flex-direction: column;
-	align-items: flex-start;
-	justify-content: start;
-	margin: 51px 0 0 29px;
-}
-
-.model__title {
-	color: black;
-	margin-bottom: 10px;
-}
-.modal__subtitle {
-	color: black;
-	margin-bottom: 40px;
-}
-.modal__about {
-	color: black;
-	margin-bottom: 37px;
-}
-
-.modal-list__item {
-	list-style: disc;
-	color: black;
-	padding-left: 3px;
-	margin-left: 12px;
-	margin-bottom: 11px;
-}
-
-.modal-list__item>strong {
-	font-weight: bold;
-}
-
-.modal-list__item::marker {
-	color: var(--color-primary);
-}
-
-.modal_visible {
-	display: block;
-}
-
-.modal__overlay {
-	position: fixed;
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	background-color: rgba(0, 0, 0, 0.7);
-	display: flex;
 	align-items: center;
 	justify-content: center;
-	width: 100%;
-	height: 100vh;
-	opacity: 0;
-	visibility: hidden;
-	transition: all 0.75s ease;
-	z-index: 3;
-} 
-
-.modal__overlay_visible {
-	opacity: 1;
-	visibility: visible;
-	transition: all 0.75s ease;
+	margin-bottom: -45px;
 }
 
-.modal__button_close {
-	position: absolute;
-	right: 0;
-	transform: translate(43px, -52px);
-	background-color: initial;
+.swiper {
+	width: 990px;
+}
+
+.swiper__button_prev {
+	transform: translate(-574px, -244px);
+}
+
+.swiper__button_next {
+	transform: translate(574px, -296px);
 }
 
 .help {
@@ -328,6 +210,7 @@
 .help__column {
 	display: flex;
 	flex-direction: column;
+	align-items: center;
 }
 
 .help__heading {
@@ -337,8 +220,9 @@
 
 .help__content {
 	display: grid;
-	grid-template-columns: repeat(5, 200px);
-	row-gap: 54px;
+	grid-template-columns: repeat(5, fit-content(200px));
+	row-gap: 55px;
+	column-gap: 40px;
 }
 
 .help-item {
@@ -458,4 +342,44 @@
 	background-repeat: no-repeat;
 	right: 0;
 	top: -16px;
+}
+
+@media screen and (max-width: 1201px) {
+	.swiper {
+		width: 580px;
+	}
+
+	.swiper__button_prev {
+		transform: translate(-328px, -244px);
+	}
+
+	.swiper__button_next {
+		transform: translate(328px, -296px);
+	}
+
+	.help__content {
+		grid-template-columns: repeat(3, 230px);
+	}
+}
+
+@media screen and (max-width: 760px) {
+	.slider {
+		margin-bottom: 10px;
+	}
+
+	.swiper {
+		width: 270px;
+	}
+
+	.swiper__button_prev {
+		transform: translate(-66px, 20px);
+	}
+
+	.swiper__button_next {
+		transform: translate(66px, -32px);
+	}
+
+	.help__content {
+		grid-template-columns: repeat(2, 230px);
+	}
 }

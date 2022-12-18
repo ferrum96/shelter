@@ -2,8 +2,8 @@
 	font-family: "Georgia";
 	font-style: normal;
 	src: url(../fonts/georgia_normal.ttf) format('truetype'),
-	url(../fonts/georgia_normal.woff) format('woff'),
-	url(../fonts/georgia_normal.woff2) format('woff2');
+		url(../fonts/georgia_normal.woff) format('woff'),
+		url(../fonts/georgia_normal.woff2) format('woff2');
 	font-weight: 400;
 }
 
@@ -11,8 +11,8 @@
 	font-family: "Georgia";
 	font-style: normal;
 	src: url(../fonts/georgia_bold.ttf) format('truetype'),
-	url(../fonts/georgia_bold.woff) format('woff'),
-	url(../fonts/georgia_bold.woff2) format('woff2');
+		url(../fonts/georgia_bold.woff) format('woff'),
+		url(../fonts/georgia_bold.woff2) format('woff2');
 	font-weight: bold;
 }
 
@@ -20,8 +20,8 @@
 	font-family: "Arial";
 	font-style: normal;
 	src: url(../fonts/arial_normal.ttf) format('truetype'),
-	url(../fonts/arial_normal.woff) format('woff'),
-	url(../fonts/arial_normal.woff2) format('woff2');
+		url(../fonts/arial_normal.woff) format('woff'),
+		url(../fonts/arial_normal.woff2) format('woff2');
 	font-weight: 400;
 }
 
@@ -29,8 +29,8 @@
 	font-family: "Arial";
 	font-style: italic;
 	src: url(../fonts/arial_italic.ttf) format('truetype'),
-	url(../fonts/arial_italic.woff) format('woff'),
-	url(../fonts/arial_italic.woff2) format('woff2');
+		url(../fonts/arial_italic.woff) format('woff'),
+		url(../fonts/arial_italic.woff2) format('woff2');
 	font-weight: 400;
 }
 
@@ -79,16 +79,23 @@ h5 {
 	letter-spacing: 0.06em;
 }
 
-ul, li {
+ul,
+li {
 	list-style: none;
 }
 
-input, button {
+input,
+button {
 	border: none;
 	font-size: inherit;
 }
 
-input:focus, button:focus {
+strong {
+	font-weight: bold;
+}
+
+input:focus,
+button:focus {
 	outline: none;
 }
 
@@ -123,6 +130,10 @@ button:hover {
 	align-items: center;
 }
 
+.button_round h4 {
+	color: var(--color-dark-3xl);
+}
+
 .button_primary {
 	padding: 13px 43px;
 	background-color: var(--color-primary);
@@ -133,9 +144,23 @@ button:hover {
 	background-color: var(--color-light-s);
 }
 
+.button_disabled {
+	border: 2px solid var(--color-dark-s);
+	color: var(--color-dark-s);
+}
+
+.button_disabled:hover {
+	background-color: inherit;
+	border: 2px solid var(--color-dark-s);
+}
+
+.button_disabled h4{
+	color: var(--color-dark-s);
+}
+
 :root {
 	--color-primary: #f1cdb3;
-	--color-primary-light:#fddcc4;
+	--color-primary-light: #fddcc4;
 	--color-light-s: #fafafa;
 	--color-light-l: #F6F6F6;
 	--color-light-xl: #fff;
@@ -146,7 +171,8 @@ button:hover {
 	--color-dark-3xl: #292929;
 }
 
-body, html {
+body,
+html {
 	font-size: 16px;
 	font-family: "Georgia", serif;
 	font-weight: 400;
@@ -158,4 +184,124 @@ body, html {
 	max-width: 1280px;
 	padding: 0 40px;
 	margin: 0 auto;
+}
+
+.pet__card {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+	width: 270px;
+	height: 435px;
+	border-radius: 9px;
+	background-color: var(--color-light-s);
+	padding-bottom: 30px;
+}
+
+.pet__image img {
+	width: 270px;
+	height: 270px;
+	border-radius: 9px 9px 0 0;
+	background-size: cover;
+	background-repeat: no-repeat;
+	margin-bottom: -9px;
+}
+
+.pet__name {
+	color: var(--color-dark-l);
+}
+
+.modal {
+	width: 900px;
+	height: 500px;
+	background-color: var(--color-light-s);
+	display: none;
+	position: relative;
+	border-radius: 9px;
+}
+
+.modal__container {
+	display: flex;
+}
+
+.modal__image img {
+	width: 500px;
+	height: 500px;
+	border-radius: 9px 0 0 9px;
+}
+
+.modal__content {
+	width: 351px;
+	height: 362px;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: start;
+	margin: 51px 0 0 29px;
+}
+
+.model__title {
+	color: black;
+	margin-bottom: 10px;
+}
+
+.modal__subtitle {
+	color: black;
+	margin-bottom: 40px;
+}
+
+.modal__about {
+	color: black;
+	margin-bottom: 37px;
+}
+
+.modal-list__item {
+	list-style: disc;
+	color: black;
+	padding-left: 3px;
+	margin-left: 12px;
+	margin-bottom: 11px;
+}
+
+.modal-list__item>strong {
+	font-weight: bold;
+}
+
+.modal-list__item::marker {
+	color: var(--color-primary);
+}
+
+.modal_visible {
+	display: block;
+}
+
+.modal__overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: rgba(0, 0, 0, 0.7);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	height: 100vh;
+	opacity: 0;
+	visibility: hidden;
+	transition: all 0.75s ease;
+	z-index: 3;
+}
+
+.modal__overlay_visible {
+	opacity: 1;
+	visibility: visible;
+	transition: all 0.75s ease;
+}
+
+.modal__button_close {
+	position: absolute;
+	right: 0;
+	transform: translate(43px, -52px);
+	background-color: initial;
 }
