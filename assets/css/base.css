@@ -195,7 +195,11 @@ html {
 	height: 435px;
 	border-radius: 9px;
 	background-color: var(--color-light-s);
-	padding-bottom: 30px;
+	padding-bottom: 31px;
+}
+
+.pet__image {
+	margin-bottom: -5px;
 }
 
 .pet__image img {
@@ -204,7 +208,6 @@ html {
 	border-radius: 9px 9px 0 0;
 	background-size: cover;
 	background-repeat: no-repeat;
-	margin-bottom: -9px;
 }
 
 .pet__name {
