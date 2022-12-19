@@ -1,14 +1,17 @@
 // Fixed header
 const header = document.querySelector('.header'),
-	headerHeight = header.offsetHeight;
-
+	headerHeight = header.offsetHeight, 
+	pets = document.querySelector('.pets');
+	
 window.addEventListener('scroll', () => {
 	let scrollDistance = window.scrollY;
 
 	if (scrollDistance >= headerHeight) {
 		header.classList.add('header_fixed');
+		pets.style.marginTop = `+${headerHeight}px`
 	} else {
 		header.classList.remove('header_fixed');
+		pets.style.marginTop = null;
 	}
 });
 
