@@ -31,7 +31,7 @@
 	font-size: 32px;
 	line-height: 110%;
 	letter-spacing: 0.06em;
-	margin-bottom: 9px;
+	margin-bottom: 10px;
 }
 
 .logo__name>* {
@@ -84,7 +84,7 @@
 }
 
 .pets {
-	padding: 80px 0 101px 0;
+	padding: 79px 0 101px 0;
 	background-color: var(--color-light-l);
 }
 
@@ -127,7 +127,7 @@
 }
 
 .footer {
-	padding: 55px 0 60px 0;
+	padding: 56px 0 60px 0;
 	background-image: url(./../../assets/images/footer-gradient-background.png);
 	background-repeat: no-repeat;
 	background-size: cover;

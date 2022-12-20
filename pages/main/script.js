@@ -35,7 +35,7 @@ for (let anhor of anhors) {
 
 // Slider
 const swiper = new Swiper(".swiper", {
-	speed: 600,
+	speed: 400,
 	allowTouchMove: false,
 	spaceBetween: 30,
 	loop: true,
