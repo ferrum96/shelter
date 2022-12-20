@@ -46,6 +46,11 @@
 	box-sizing: border-box;
 }
 
+:active, :hover, :focus {
+	outline: 0;
+	outline-offset: 0;
+}
+
 h1 {
 	color: var(--color-light-s);
 	font-size: 32px;
@@ -198,6 +203,16 @@ html {
 	padding-bottom: 31px;
 }
 
+.pet__card:hover {
+	cursor: url('./../../assets/icons/pointer.svg'), pointer;
+	background-color: var(--color-light-xl);
+}
+
+.pet__card:hover button {
+	background-color: var(--color-primary-light);
+	border: 2px solid var(--color-primary-light);
+}
+
 .pet__image {
 	margin-bottom: -5px;
 }
@@ -292,14 +307,14 @@ html {
 	height: 100vh;
 	opacity: 0;
 	visibility: hidden;
-	transition: all 0.75s ease;
+	transition: all 0.55s ease;
 	z-index: 3;
 }
 
 .modal__overlay_visible {
 	opacity: 1;
 	visibility: visible;
-	transition: all 0.75s ease;
+	transition: all 0.55s ease;
 }
 
 .modal__button_close {

@@ -1,10 +1,10 @@
 // Modal window
-const petButtons = document.querySelectorAll('.pet__button');
+const petCards = document.querySelectorAll('.pet__card');
 const modalCloseButtons = document.querySelectorAll('.modal__button_close');
 const modalOverlay = document.querySelector('.modal__overlay');
 const modals = document.querySelectorAll('.modal');
 
-petButtons.forEach((el) => {
+petCards.forEach((el) => {
     el.addEventListener('click', (e) => {
         let path = e.currentTarget.getAttribute('data-path');
 
