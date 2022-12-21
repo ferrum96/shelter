@@ -84,7 +84,6 @@
 }
 
 .start-screen {
-	height: 908px;
 	background: url(./../../assets/images/start-screen-gradient-background.png), radial-gradient(100% 215.42% at 0% 0%, #5B483A 0%, #262425 100%);
 	padding-top: 180px;
 	background-size: cover;
@@ -93,6 +92,7 @@
 .start-screen__row {
 	display: flex;
 	justify-content: space-between;
+	flex-wrap: wrap;
 }
 
 .start-screen__content {
@@ -204,7 +204,7 @@
 }
 
 .help {
-	padding: 80px 0 100px 0;
+	padding: 81px 0 100px 0;
 }
 
 .help__column {
@@ -296,55 +296,42 @@
 	line-height: 18px;
 }
 
-.footer {
-	padding: 56px 0 60px 0;
-	background-image: url(./../../assets/images/footer-gradient-background.png);
-	background-repeat: no-repeat;
-	background-size: cover;
-}
+@media (min-width: 768px) and (max-width: 1280px) {
+	.header {
+		padding: 31px 0;
+	}
 
-.footer__row {
-	position: relative;
-	display: flex;
-	justify-content: flex-start;
-	gap: 161px;
-	height: 235px;
-}
+	.start-screen {
+		padding-top: 0;
+	}
 
-.footer__contacts {
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
-}
+	.start-screen__row {
+		align-items: center;
+		flex-direction: column;
+		gap: 100px;
+	}
 
-.footer__location {
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
-}
+	.start-screen__heading {
+		align-self: flex-start;
+	}
 
-.footer__title {
-	color: var(--color-light-xl);
-}
+	.start-screen__content {
+		height: 472px;
+		padding-top: 150px;
+		align-items: center;
+	}
 
-.footer__link {
-	display: flex;
-	gap: 20px;
-	align-items: center;
-}
+	.start-screen__photo {
+		max-width: 569px;
+		max-height: 593px;
+		transform: translateX(69px);
+	}
 
-.footer__image {
-	position: absolute;
-	width: 300px;
-	height: 310px;
-	background-image: url(./../../assets/images/footer-puppy.png);
-	background-size: cover;
-	background-repeat: no-repeat;
-	right: 0;
-	top: -16px;
-}
+	.about__row {
+		flex-direction: column-reverse;
+		gap: 81px;
+	}
 
-@media screen and (max-width: 1201px) {
 	.swiper {
 		width: 580px;
 	}
@@ -360,7 +347,20 @@
 	.help__content {
 		display: grid;
 		grid-template-columns: repeat(3, 170px);
-    column-gap: 60px;
+		column-gap: 60px;
+	}
+
+	.help {
+		padding: 79px 0 100px 0;
+	}
+
+	.donation {
+		padding: 81px 0 101px 0;
+	}
+
+	.donation__row {
+		flex-direction: column-reverse;
+		gap: 60px;
 	}
 }
 

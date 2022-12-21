@@ -126,55 +126,15 @@
 	color: var(--color-dark-3xl);
 }
 
-.footer {
-	padding: 56px 0 60px 0;
-	background-image: url(./../../assets/images/footer-gradient-background.png);
-	background-repeat: no-repeat;
-	background-size: cover;
-}
+@media (min-width: 768px) and (max-width: 1280px) {
+	.pets {
+		padding: 79px 0 77px 0;
+	}
 
-.footer__row {
-	position: relative;
-	display: flex;
-	justify-content: flex-start;
-	gap: 161px;
-	height: 235px;
-}
+	.pets__heading {
+		margin-bottom: 30px;
+	}
 
-.footer__contacts {
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
-}
-
-.footer__location {
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
-}
-
-.footer__title {
-	color: var(--color-light-xl);
-}
-
-.footer__link {
-	display: flex;
-	gap: 20px;
-	align-items: center;
-}
-
-.footer__image {
-	position: absolute;
-	width: 300px;
-	height: 310px;
-	background-image: url(./../../assets/images/footer-puppy.png);
-	background-size: cover;
-	background-repeat: no-repeat;
-	right: 0;
-	top: -16px;
-}
-
-@media screen and (max-width: 1225px) {
 	.swiper {
 		width: 580px;
 		height: 1385px;
