@@ -96,7 +96,7 @@
 }
 
 .start-screen__content {
-	width: 460px;
+	max-width: 460px;
 	height: 484px;
 	padding-top: 163px;
 	display: flex;
@@ -145,7 +145,7 @@
 }
 
 .about__content {
-	width: 430px;
+	max-width: 430px;
 	height: 380px;
 	display: flex;
 	flex-direction: column;
@@ -251,14 +251,8 @@
 	column-gap: 29px;
 }
 
-.donation__image {
-	width: 505px;
-	height: 261px;
-	background-image: url(./../../assets/images/donation-dog.png);
-}
-
 .donation__content {
-	width: 380px;
+	max-width: 380px;
 	height: 282px;
 	display: flex;
 	flex-direction: column;
@@ -355,7 +349,7 @@
 	}
 
 	.donation {
-		padding: 81px 0 101px 0;
+		padding: 81px 0 96px 0;
 	}
 
 	.donation__row {
@@ -364,7 +358,70 @@
 	}
 }
 
-@media screen and (max-width: 760px) {
+@media (min-width: 320px) and (max-width: 767px) {
+	.header {
+		padding: 30px 0;
+	}
+
+	.nav {
+		display: none;
+	}
+
+	.start-screen {
+		padding-top: 149px;
+	}
+
+	.start-screen__row {
+		align-items: center;
+		flex-direction: column;
+		gap: 100px;
+	}
+
+	.start-screen__content {
+		padding-top: 0;
+		align-items: center;
+		text-align: center;
+		height: 297px;
+	}
+
+	.start-screen__photo {
+		width: 260px;
+		height: 277px;
+		transform: translate(19px, 5px);
+	}
+
+	.about {
+		padding: 41px 0;
+	}
+
+	.about__row {
+		flex-direction: column-reverse;
+		gap: 42px;
+	}
+
+	.about__content {
+		text-align: justify;
+		height: 497px;
+		padding: 0 15px;
+	}
+
+	.about__heading {
+		text-align: center;
+	}
+
+	.about__pets {
+		width: 260px;
+		height: 353px;
+	}
+
+	.pets {
+		padding: 42px 0;
+	}
+
+	.pets__heading {
+		margin-bottom: 41px;
+	}
+
 	.slider {
 		margin-bottom: 10px;
 	}
@@ -381,7 +438,60 @@
 		transform: translate(66px, -32px);
 	}
 
+	.help {
+		padding: 42px 0;
+	}
+
 	.help__content {
-		grid-template-columns: repeat(2, 230px);
+		display: grid;
+		grid-template-columns: repeat(2, 151px);
+		gap: 29px 9px;
+	}
+
+	.help__heading {
+		margin-bottom: 40px;
+	}
+
+	.help-item {
+		height: 88px;
+	}
+
+	.help-item__title {
+		font-size: 15px;
+	}
+
+	.help-item img {
+		width: auto;
+		height: 50px;
+	}
+
+	.donation {
+		padding: 42px 0 39px 0;
+	}
+
+	.donation__row {
+		flex-direction: column-reverse;
+		gap: 40px;
+	}
+
+	.donation__content {
+		height: 283px;
+		text-align: justify;
+		align-items: center;
+		justify-content: space-between;
+		padding: 0 10px;
+	}
+
+	.donation__button {
+		gap: 13px;
+	}
+
+	.donation__button h4 {
+		font-size: 15px;
+	}
+
+	.donation__image img{
+		width: 260px;
+		height: 135px;
 	}
 }

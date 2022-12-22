@@ -350,6 +350,7 @@ html {
 .footer__contacts {
 	display: flex;
 	height: 234px;
+	max-width: 279px;
 	flex-direction: column;
 	justify-content: space-between;
 }
@@ -357,6 +358,7 @@ html {
 .footer__location {
 	display: flex;
 	height: 234px;
+	max-width: 295px;
 	flex-direction: column;
 	justify-content: space-between;
 }
@@ -372,11 +374,6 @@ html {
 }
 
 .footer__image {
-	width: 300px;
-	height: 310px;
-	background-image: url(./../../assets/images/footer-puppy.png);
-	background-size: cover;
-	background-repeat: no-repeat;
 	transform: translate(-1px, -16px);
 	margin-bottom: -16px;
 }
@@ -401,5 +398,60 @@ html {
 
 	.footer__image {
 		margin: 81px 0 -76px 0;
+	}
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+	.container {
+		padding: 0 10px;
+	}
+
+	h2,
+	h3 {
+		font-size: 25px;
+		letter-spacing: 0.06em;
+		text-align: center;
+	}
+
+	h5 {
+		letter-spacing: 0;
+	}
+
+	.footer {
+		padding: 29px 0 60px 0;
+	}
+
+	.footer__row {
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.footer__content {
+		flex-direction: column;
+		gap: 39px;
+		align-items: center;
+	}
+
+	.footer__title {
+		max-width: 231px;
+		align-self: center;
+	}
+
+	.footer__contacts {
+		align-items: center;
+		height: 209px;
+	}
+
+	.footer__location {
+		height: 222px;
+	}
+
+	.footer__image {
+		margin: 56px 0 -79px 0;
+	}
+
+	.footer__image img {
+		max-width: 260px;
+		max-height: 269px;
 	}
 }
