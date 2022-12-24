@@ -33,6 +33,40 @@ for (let anhor of anhors) {
 	});
 }
 
+// Burger menu
+const headerBurgerBtn = document.querySelector('.header__burger'),
+	body = document.querySelector('body'),
+	burgerOverlay = document.querySelector('.burger__overlay');
+
+headerBurgerBtn.addEventListener('click', () => {
+	header.classList.toggle('header__burger_open');
+	if (header.classList.contains('header__burger_open')) {
+		body.style.overflow = 'hidden';
+		header.style.overflow = 'visible';
+		burgerOverlay.classList.add('burger__overlay_visible')
+	} else {
+		body.style.overflow = 'visible';
+		header.style.overflow = 'hidden';
+		burgerOverlay.classList.remove('burger__overlay_visible');
+	}
+});
+
+burgerOverlay.addEventListener('click', () => {
+	burgerOverlay.classList.remove('burger__overlay_visible');
+	header.classList.remove('header__burger_open');
+	body.style.overflow = 'visible';
+	header.style.overflow = 'hidden';
+});
+
+for (let anhor of anhors) {
+	anhor.addEventListener('click', () => {
+		header.classList.remove('header__burger_open');
+		body.style.overflow = (header.classList.contains('header__burger_open')) ? 'hidden' : 'visible';
+		burgerOverlay.classList.remove('burger__overlay_visible');
+		header.style.overflow = 'hidden';
+	});
+}
+
 // Slider
 const swiper = new Swiper(".swiper", {
 	speed: 400,

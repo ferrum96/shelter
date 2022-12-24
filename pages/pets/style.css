@@ -14,17 +14,120 @@
 	z-index: 2;
 }
 
+.header.header__burger_open.header_fixed {
+	background: none;
+}
+
 .header__row {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+}
 
+.header__burger {
+	position: absolute;
+	display: none;
+	width: 30px;
+	height: 22px;
+	border: none;
+	margin-right: 43px;
+	right: 10px;
+	top: 49px;
+	cursor: url('./../../assets/icons/pointer.svg'), pointer;
+	z-index: 5;
+}
+
+.burger__overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: rgba(0, 0, 0, 0.7);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	height: 100vh;
+	opacity: 0;
+	visibility: hidden;
+	transition: all 0.55s ease;
+	z-index: 3;
+}
+
+.burger__overlay_visible {
+	opacity: 1;
+	visibility: visible;
+	transition: all 0.55s ease;
+}
+
+.header.header__burger_open .nav {
+	transform: translateX(0%);
+	visibility: visible;
+	transition: transform .5s ease;
+}
+
+.header__burger span {
+	position: absolute;
+	width: 100%;
+	height: 2px;
+	background-color: var(--color-dark-l);
+}
+
+.header__burger:hover span {
+	background-color: var(--color-dark-3xl);
+	transition: all .5s ease;
+}
+
+.header__burger span:nth-child(1) {
+	transition: all .5s ease;
+}
+
+.header.header__burger_open .header__burger span:nth-child(1) {
+	transform: translate(-11px, 10px) rotate(90deg);
+	transition: all .5s ease;
+}
+
+.header__burger span:nth-child(2) {
+	transform: translateY(10px);
+	transition: all .5s ease;
+}
+
+.header.header__burger_open .header__burger span:nth-child(2) {
+	transform: translate(-1px, 10px) rotate(90deg);
+	transition: all .5s ease;
+}
+
+.header__burger span:nth-child(3) {
+	transform: translateY(20px);
+	transition: all .5s ease;
+}
+
+.header.header__burger_open .header__burger span:nth-child(3) {
+	transform: translate(9px, 10px) rotate(90deg);
+	transition: all .5s ease;
 }
 
 .logo {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	z-index: 4;
+}
+
+.header.header__burger_open .header__row>.logo {
+	opacity: 0;
+}
+
+.nav>.logo {
+	display: none;
+}
+
+.header.header__burger_open .nav>.logo {
+	display: flex;
+	align-items: flex-start;
+	text-align: start;
+	margin: 31px 0 0 10px;
 }
 
 .logo__name {
@@ -143,8 +246,39 @@
 }
 
 @media (min-width: 320px) and (max-width: 767px) {
+	.header {
+		padding: 30px 0;
+	}
+
+	.header__burger {
+		display: block;
+	}
+
 	.nav {
-		display: none;
+		width: 320px;
+		height: 200vh;
+		position: absolute;
+		right: 0;
+		top: 0;
+		visibility: hidden;
+		background-color: var(--color-light-xl);
+		z-index: 5;
+		text-align: center;
+		transform: translateX(100%);
+		transition: transform .5s ease;
+	}
+
+	.menu {
+		flex-direction: column;
+		margin-top: 159px;
+	}
+
+	.menu__item {
+		margin-bottom: 41px;
+	}
+
+	.menu__item a {
+		font-size: 32px;
 	}
 
 	.pets {

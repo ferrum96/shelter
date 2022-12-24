@@ -1,8 +1,9 @@
 // Fixed header
 const header = document.querySelector('.header'),
-	headerHeight = header.offsetHeight, 
-	pets = document.querySelector('.pets');
-	
+	headerHeight = header.offsetHeight,
+	pets = document.querySelector('.pets'),
+	anhors = [document.querySelector("a[href='#contacts']"), document.querySelector("a[href='#our-pets']")];
+
 window.addEventListener('scroll', () => {
 	let scrollDistance = window.scrollY;
 
@@ -14,6 +15,57 @@ window.addEventListener('scroll', () => {
 		pets.style.marginTop = null;
 	}
 });
+
+for (let anhor of anhors) {
+	anhor.addEventListener('click', (event) => {
+		event.preventDefault();
+		const blockId = anhor.getAttribute('href');
+		const scrollTarget = document.querySelector('' + blockId);
+		const topOffset = 100;
+		const elementPosition = scrollTarget.getBoundingClientRect().top;
+		const offsetPosition = elementPosition - topOffset;
+
+		window.scrollBy({
+			top: offsetPosition,
+			behavior: 'smooth'
+		});
+	});
+}
+
+// Burger menu
+const headerBurgerBtn = document.querySelector('.header__burger'),
+	body = document.querySelector('body'),
+	burgerOverlay = document.querySelector('.burger__overlay');
+
+headerBurgerBtn.addEventListener('click', () => {
+	header.classList.toggle('header__burger_open');
+	anhors[1].focus();
+	if (header.classList.contains('header__burger_open')) {
+		body.style.overflow = 'hidden';
+		header.style.overflow = 'visible';
+		burgerOverlay.classList.add('burger__overlay_visible')
+	} else {
+		body.style.overflow = 'visible';
+		header.style.overflow = 'hidden';
+		burgerOverlay.classList.remove('burger__overlay_visible');
+	}
+});
+
+burgerOverlay.addEventListener('click', () => {
+	burgerOverlay.classList.remove('burger__overlay_visible');
+	header.classList.remove('header__burger_open');
+	body.style.overflow = 'visible';
+	header.style.overflow = 'hidden';
+});
+
+for (let anhor of anhors) {
+	anhor.addEventListener('click', () => {
+		header.classList.remove('header__burger_open');
+		body.style.overflow = (header.classList.contains('header__burger_open')) ? 'hidden' : 'visible';
+		burgerOverlay.classList.remove('burger__overlay_visible');
+		header.style.overflow = 'hidden';
+	});
+}
 
 // Slider
 const counter = document.querySelector('.slider__counter').querySelector('h4');

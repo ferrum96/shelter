@@ -8,6 +8,7 @@
 	<title>Our pets</title>
 	<link href="./style.css" rel="stylesheet">
 	<link href="./../../assets/css/base.css" rel="stylesheet">
+	<link href="./../../assets/css/modal-window.css" rel="stylesheet">
 	<link rel="stylesheet" href="./../../assets/css/swiper-bundle.min.css">
 	<script src="./../../assets/js/swiper-bundle.min.js" defer></script>
 	<script src="./script.js" defer></script>
@@ -25,19 +26,31 @@
 					<span class="logo__subtitle">Shelter for pets in Boston</span>
 				</div>
 				<nav class="nav">
+					<div class="logo">
+						<a class="logo__name" href="#">
+							<h1>Cozy House</h1>
+						</a>
+						<span class="logo__subtitle">Shelter for pets in Boston</span>
+					</div>
 					<ul class="menu">
 						<li class="menu__item"><a href="./../main/index.html#about-the-shelter">About the shelter</a></li>
-						<li class="menu__item"><a href="#" autofocus>Our pets</a></li>
+						<li class="menu__item"><a href="#our-pets" autofocus>Our pets</a></li>
 						<li class="menu__item"><a href="./../main/index.html#help-the-shelter">Help the shelter</a></li>
 						<li class="menu__item"><a href="#contacts">Contacts</a></li>
 					</ul>
 				</nav>
+				<div class="header__burger">
+					<span></span>
+					<span></span>
+					<span></span>
+				</div>
+				<div class="burger__overlay"></div>
 			</div>
 		</div>
 	</header>
 
 	<main>
-		<section class="pets">
+		<section class="pets" id="our-pets">
 			<div class="container">
 				<div class="pets__column">
 					<h3 class="pets__heading">Our friends who<br>are looking for a&nbsp;house</h3>
