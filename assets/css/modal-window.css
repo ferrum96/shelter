@@ -1,6 +1,5 @@
 .modal {
 	width: calc(630px + (900 - 630) * ((100vw - 768px) / (1280 - 768)));
-	/* height: calc(350px + (500 - 350) * ((100vw - 768px) / (1280 - 768))); */
 	background-color: var(--color-light-s);
 	display: none;
 	position: relative;
@@ -19,7 +18,6 @@
 
 .modal__content {
 	width: calc(261px + (351 - 261) * ((100vw - 768px) / (1280 - 768)));
-	/* height: calc(303px + (362 - 303) * ((100vw - 768px) / (1280 - 768))); */
 	display: flex;
 	flex-direction: column;
 	align-items: flex-start;
