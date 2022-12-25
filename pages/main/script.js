@@ -1,7 +1,6 @@
 // Fixed header
 const header = document.querySelector('.header'),
 	headerHeight = header.offsetHeight,
-	startScreen = document.querySelector('.start-screen'),
 	anhors = [document.querySelector("a[href='#about-the-shelter']"),
 	document.querySelector("a[href='#help-the-shelter']"),
 	document.querySelector("a[href='#contacts']"),
