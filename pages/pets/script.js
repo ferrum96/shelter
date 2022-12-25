@@ -39,7 +39,6 @@ const headerBurgerBtn = document.querySelector('.header__burger'),
 
 headerBurgerBtn.addEventListener('click', () => {
 	header.classList.toggle('header__burger_open');
-	anhors[1].focus();
 	if (header.classList.contains('header__burger_open')) {
 		body.style.overflow = 'hidden';
 		header.style.overflow = 'visible';

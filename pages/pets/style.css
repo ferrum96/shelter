@@ -248,6 +248,7 @@
 @media (min-width: 320px) and (max-width: 767px) {
 	.header {
 		padding: 30px 0;
+		overflow-x: hidden;
 	}
 
 	.header__burger {
