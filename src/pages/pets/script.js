@@ -1,18 +1,18 @@
 // Fixed header
 const header = document.querySelector('.header'),
 	headerHeight = header.offsetHeight,
-	anhors = [document.querySelector("a[href='#about-the-shelter']"),
-	document.querySelector("a[href='#help-the-shelter']"),
-	document.querySelector("a[href='#contacts']"),
-	document.querySelector("a[href='#make-a-friend']")];
+	pets = document.querySelector('.pets'),
+	anhors = [document.querySelector("a[href='#contacts']"), document.querySelector("a[href='#our-pets']")];
 
 window.addEventListener('scroll', () => {
 	let scrollDistance = window.scrollY;
 
 	if (scrollDistance >= headerHeight) {
 		header.classList.add('header_fixed');
+		pets.style.marginTop = `+${headerHeight}px`
 	} else {
 		header.classList.remove('header_fixed');
+		pets.style.marginTop = null;
 	}
 });
 
@@ -34,7 +34,7 @@ for (let anhor of anhors) {
 
 // Burger menu
 const headerBurgerBtn = document.querySelector('.header__burger'),
-	body = document.querySelector('body'),
+	body = document.body,
 	burgerOverlay = document.querySelector('.burger__overlay');
 
 headerBurgerBtn.addEventListener('click', () => {
@@ -67,33 +67,53 @@ for (let anhor of anhors) {
 }
 
 // Slider
-const swiper = new Swiper(".swiper", {
-	speed: 400,
-	allowTouchMove: false,
-	spaceBetween: 30,
-	loop: true,
-	onlyExternal: true,
+const counter = document.querySelector('.slider__counter').querySelector('h4');
+const prevPage = document.querySelector('#prevPage');
+const prev = document.querySelector('#prev');
+const next = document.querySelector('#next');
+const nextPage = document.querySelector('#nextPage');
 
+const slider = new Swiper(".swiper", {
+	speed: 800,
 	navigation: {
 		nextEl: ".swiper__button_next",
 		prevEl: ".swiper__button_prev",
+		disabledClass: "button_disabled",
 	},
-
+	allowTouchMove: false,
 	breakpoints: {
-		// desktop >= 1200
-		1201: {
-			slidesPerView: 3,
-			spaceBetween: 90,
+		// desktop >= 1225
+		1225: {
+			slidesPerView: 4,
+			slidesPerGroup: 4,
+			spaceBetween: 30,
+			grid: {
+				rows: 2,
+			},
 		},
-		//760-1199
-		760: {
+		//700-1224
+		700: {
 			slidesPerView: 2,
-			spaceBetween: 40,
+			slidesPerGroup: 2,
+			spaceBetween: 30,
+			grid: {
+				rows: 3,
+			},
 		},
-		// 320-759
+		// 320-699
 		320: {
 			slidesPerView: 1,
-			spaceBetween: 40,
+			slidesPerGroup: 1,
+			spaceBetween: 30,
+			grid: {
+				rows: 3,
+			},
 		},
-	}
+	},
+
+	on: {
+		slideChange: function () {
+			counter.innerHTML = `${Math.ceil((slider.realIndex) / slider.params.slidesPerGroup + 1)}`;
+		},
+	},
 });

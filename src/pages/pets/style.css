@@ -33,7 +33,7 @@
 	margin-right: 43px;
 	right: 10px;
 	top: 49px;
-	cursor: url('./../../assets/icons/pointer.svg'), pointer;
+	cursor: url('../../../assets/icons/pointer.svg'), pointer;
 	z-index: 5;
 }
 
@@ -221,7 +221,7 @@
 
 .slider__counter {
 	background-color: var(--color-primary) !important;
-	cursor: url('./../../assets/icons/cursor.svg'), auto;
+	cursor: url('./../../../assets/icons/cursor.svg'), auto;
 	border: 2px solid var(--color-primary) !important;
 }
 
