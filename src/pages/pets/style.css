@@ -33,7 +33,7 @@
 	margin-right: 43px;
 	right: 10px;
 	top: 49px;
-	cursor: url('./../../assets/icons/pointer.svg'), pointer;
+	cursor: url('../../../assets/icons/pointer.svg'), pointer;
 	z-index: 5;
 }
 
