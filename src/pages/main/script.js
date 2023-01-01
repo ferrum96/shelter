@@ -1,7 +1,9 @@
+import randomSequence from "../../js/random-generator.js";
+
 // Fixed header
 const header = document.querySelector('.header'),
 	headerHeight = header.offsetHeight,
-	anhors = [document.querySelector("a[href='#about-the-shelter']"),
+	anchors = [document.querySelector("a[href='#about-the-shelter']"),
 	document.querySelector("a[href='#help-the-shelter']"),
 	document.querySelector("a[href='#contacts']"),
 	document.querySelector("a[href='#make-a-friend']")];
@@ -16,10 +18,10 @@ window.addEventListener('scroll', () => {
 	}
 });
 
-for (let anhor of anhors) {
-	anhor.addEventListener('click', (event) => {
+for (let anchor of anchors) {
+	anchor.addEventListener('click', (event) => {
 		event.preventDefault();
-		const blockId = anhor.getAttribute('href');
+		const blockId = anchor.getAttribute('href');
 		const scrollTarget = document.querySelector('' + blockId);
 		const topOffset = 100;
 		const elementPosition = scrollTarget.getBoundingClientRect().top;
@@ -34,17 +36,16 @@ for (let anhor of anhors) {
 
 // Burger menu
 const headerBurgerBtn = document.querySelector('.header__burger'),
-	body = document.body,
 	burgerOverlay = document.querySelector('.burger__overlay');
 
 headerBurgerBtn.addEventListener('click', () => {
 	header.classList.toggle('header__burger_open');
 	if (header.classList.contains('header__burger_open')) {
-		body.style.overflow = 'hidden';
+		document.body.style.overflow = 'hidden';
 		header.style.overflow = 'visible';
 		burgerOverlay.classList.add('burger__overlay_visible')
 	} else {
-		body.style.overflow = 'visible';
+		document.body.style.overflow = 'visible';
 		header.style.overflow = 'hidden';
 		burgerOverlay.classList.remove('burger__overlay_visible');
 	}
@@ -53,14 +54,14 @@ headerBurgerBtn.addEventListener('click', () => {
 burgerOverlay.addEventListener('click', () => {
 	burgerOverlay.classList.remove('burger__overlay_visible');
 	header.classList.remove('header__burger_open');
-	body.style.overflow = 'visible';
+	document.body.style.overflow = 'visible';
 	header.style.overflow = 'hidden';
 });
 
-for (let anhor of anhors) {
-	anhor.addEventListener('click', () => {
+for (let anchor of anchors) {
+	anchor.addEventListener('click', () => {
 		header.classList.remove('header__burger_open');
-		body.style.overflow = (header.classList.contains('header__burger_open')) ? 'hidden' : 'visible';
+		document.body.style.overflow = (header.classList.contains('header__burger_open')) ? 'hidden' : 'visible';
 		burgerOverlay.classList.remove('burger__overlay_visible');
 		header.style.overflow = 'hidden';
 	});
@@ -68,7 +69,7 @@ for (let anhor of anhors) {
 
 // Slider
 const swiper = new Swiper(".swiper", {
-	speed: 400,
+	speed: 800,
 	allowTouchMove: false,
 	spaceBetween: 30,
 	loop: true,
@@ -101,22 +102,20 @@ const swiper = new Swiper(".swiper", {
 	}
 });
 
-// const swiperWrapper = document.querySelector('.swiper-wrapper');
-// let swiperSlide = document.createElement('div');
-// swiperSlide.classList.add('swiper-slide');
-// console.log(swiperSlide);
+let pets = await fetch('../../pets.json')
+	.then((response) => response.json())
+	.then((data) => data.pets);
 
-
-
-// swiperSlide.innerHTML =
-// 		'<div class= "pet__card" data-path="pets-katrine">'+
-// 			'<div class="pet__image">'+
-// 				`<img src="${''}>" alt="pets-katrine">`+
-// 			'</div>'+
-// 			'<h4 class="pet__name">Katrine</h4>'+
-// 			'<button class="pet__button button_secondary">Learn more</button>'+
-// 		'</div>';
-
-// console.log(swiperSlide);
-
-// swiperWrapper.append(swiperSlide);
+randomSequence(0, 7, 6).forEach((randomNumber) => {
+	swiper.appendSlide(
+		`<div class= "swiper-slide">
+			<div class= "pet__card" data-path="${pets[randomNumber].data}">
+				<div class="pet__image">
+					<img src="${pets[randomNumber].img}" alt="${pets[randomNumber].data}">
+				</div>
+				<h4 class="pet__name">${pets[randomNumber].name}</h4>
+				<button class="pet__button button_secondary">Learn more</button>
+			</div>
+		</div>`
+	);
+});

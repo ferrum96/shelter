@@ -1,25 +1,27 @@
+import randomSequence from "../../js/random-generator.js";
+
 // Fixed header
 const header = document.querySelector('.header'),
 	headerHeight = header.offsetHeight,
-	pets = document.querySelector('.pets'),
-	anhors = [document.querySelector("a[href='#contacts']"), document.querySelector("a[href='#our-pets']")];
+	petsBlock = document.querySelector('.pets'),
+	anchors = [document.querySelector("a[href='#contacts']"), document.querySelector("a[href='#our-pets']")];
 
 window.addEventListener('scroll', () => {
 	let scrollDistance = window.scrollY;
 
 	if (scrollDistance >= headerHeight) {
 		header.classList.add('header_fixed');
-		pets.style.marginTop = `+${headerHeight}px`
+		petsBlock.style.marginTop = `+${headerHeight}px`
 	} else {
 		header.classList.remove('header_fixed');
-		pets.style.marginTop = null;
+		petsBlock.style.marginTop = null;
 	}
 });
 
-for (let anhor of anhors) {
-	anhor.addEventListener('click', (event) => {
+for (let anchor of anchors) {
+	anchor.addEventListener('click', (event) => {
 		event.preventDefault();
-		const blockId = anhor.getAttribute('href');
+		const blockId = anchor.getAttribute('href');
 		const scrollTarget = document.querySelector('' + blockId);
 		const topOffset = 100;
 		const elementPosition = scrollTarget.getBoundingClientRect().top;
@@ -57,8 +59,8 @@ burgerOverlay.addEventListener('click', () => {
 	header.style.overflow = 'hidden';
 });
 
-for (let anhor of anhors) {
-	anhor.addEventListener('click', () => {
+for (let anchor of anchors) {
+	anchor.addEventListener('click', () => {
 		header.classList.remove('header__burger_open');
 		body.style.overflow = (header.classList.contains('header__burger_open')) ? 'hidden' : 'visible';
 		burgerOverlay.classList.remove('burger__overlay_visible');
@@ -68,10 +70,12 @@ for (let anhor of anhors) {
 
 // Slider
 const counter = document.querySelector('.slider__counter').querySelector('h4');
-const prevPage = document.querySelector('#prevPage');
-const prev = document.querySelector('#prev');
-const next = document.querySelector('#next');
-const nextPage = document.querySelector('#nextPage');
+const startSlides = document.querySelector('#startSlides');
+const endSlides = document.querySelector('#endSlides');
+
+let pets = await fetch('../../pets.json')
+	.then((response) => response.json())
+	.then((data) => data.pets);
 
 const slider = new Swiper(".swiper", {
 	speed: 800,
@@ -116,4 +120,29 @@ const slider = new Swiper(".swiper", {
 			counter.innerHTML = `${Math.ceil((slider.realIndex) / slider.params.slidesPerGroup + 1)}`;
 		},
 	},
+});
+
+const countGroups = 6;
+for (let i = 0; i < countGroups; i++) {
+	randomSequence(0, 7, 8).forEach((randomNumber) => {
+		slider.appendSlide(
+			`<div class= "swiper-slide">
+				<div class= "pet__card" data-path="${pets[randomNumber].data}">
+					<div class="pet__image">
+						<img src="${pets[randomNumber].img}" alt="${pets[randomNumber].data}">
+					</div>
+					<h4 class="pet__name">${pets[randomNumber].name}</h4>
+					<button class="pet__button button_secondary">Learn more</button>
+				</div>
+			</div>`
+		);
+	});
+}
+
+endSlides.addEventListener('click', () => {
+	slider.slideTo(slider.slides.length - 1);
+});
+
+startSlides.addEventListener('click', () => {
+	slider.slideTo(0);
 });
