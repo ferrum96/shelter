@@ -215,8 +215,10 @@
 }
 
 .start-screen__photo {
-	width: 698px;
-	height: 727px;
+	max-width: 698px;
+	max-height: 728px;
+	width: calc(569px + (698 - 569) * ((100vw - 768px) / (1280 - 768)));
+	height: calc(573px + (728 - 573) * ((100vw - 768px) / (1280 - 768)));
 	background-image: url(../../../assets/images/start-screen-puppy.png);
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -414,8 +416,6 @@
 	}
 
 	.start-screen__photo {
-		max-width: 569px;
-		max-height: 593px;
 		transform: translateX(69px);
 	}
 
@@ -495,6 +495,7 @@
 
 	.start-screen {
 		padding-top: 149px;
+		padding-bottom: 6px;
 	}
 
 	.start-screen__row {
@@ -511,8 +512,8 @@
 	}
 
 	.start-screen__photo {
-		width: 260px;
-		height: 277px;
+		width: calc(260px + (569 - 260) * ((100vw - 320px) / (767 - 320)));
+		height: calc(271px + (573 - 271) * ((100vw - 320px) / (767 - 320)));
 		transform: translate(19px, 5px);
 	}
 
@@ -617,7 +618,7 @@
 	}
 
 	.donation__image img {
-		width: 260px;
-		height: 135px;
+		width: calc(260px + (505 - 260) * ((100vw - 320px) / (767 - 320)));
+		height: calc(135px + (261 - 135) * ((100vw - 320px) / (767 - 320)));
 	}
 }

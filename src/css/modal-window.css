@@ -12,7 +12,7 @@
 
 .modal__image img {
 	width: calc(350px + (500 - 350) * ((100vw - 768px) / (1280 - 768)));
-	height: calc(350px + (500 - 350) * ((100vw - 768px) / (1280 - 768)));
+	height: auto;
 	border-radius: 9px 0 0 9px;
 }
 
