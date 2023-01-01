@@ -110,23 +110,20 @@
 		min-height: 321px;
 		display: flex;
 		flex-direction: column;
-		align-items: center;
 		justify-content: start;
 		margin-top: 10px;
 		margin-left: 0;
 	}
 
 	.modal__title {
-		margin-bottom: 20px;
-	}
-
-	.modal__title {
 		font-size: 35px;
 		margin-bottom: 10px;
+		align-self: center;
 	}
 
 	.modal__subtitle {
 		margin-bottom: 20px;
+		align-self: center;
 	}
 
 	.modal__image img {
@@ -138,10 +135,6 @@
 		text-align: justify;
 		margin-bottom: 23px;
 		font-size: 13px;
-	}
-
-	.modal-list {
-    margin-right: 48px;
 	}
 
 	.modal-list__item {
@@ -159,5 +152,4 @@
 	.modal__button_close {
 		transform: translate(31px, -52px);
 	}
-
 }
